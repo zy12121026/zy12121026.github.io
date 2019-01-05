@@ -229,6 +229,265 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/2019-01-05-算法收集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/05/2019-01-05-算法收集/" itemprop="url">算法收集</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-05T10:32:01+08:00">
+                2019-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="数组相关"><a href="#数组相关" class="headerlink" title="数组相关"></a>数组相关</h3><ol>
+<li>题目：给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。<br>思路：维护一个对象来记录每一个元素出现的次数，使用元素的值作为key,元素出现的次数作为value。之后再遍历这个对象，找到value为1的key。对应的key就是那个元素。obj[key] = value<br>常规算法:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function singleNum(arr) &#123;</span><br><span class="line">  const obj = &#123;&#125;;</span><br><span class="line">  for (let i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    obj[arr[i]] = obj[arr[i]] ? obj[arr[i]] + 1 : 1;</span><br><span class="line">  &#125;</span><br><span class="line">  for (let key in obj) &#123;</span><br><span class="line">    if (obj[key] === 1) &#123;</span><br><span class="line">      return Number(key); // 转换key为数字</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(singleNum([2, 2, 1, 4, 4, 5, 5, 1, 8])); // 8</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>其次，添加限制条件：不使用额外空间来实现<br>思路：采用异或方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function singleNumber(arr) &#123;</span><br><span class="line">  for (let i = 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">    arr[0] ^= arr[i];</span><br><span class="line">  &#125;</span><br><span class="line">  return arr[0];</span><br><span class="line">&#125;;</span><br><span class="line">console.log(singleNumber([2, 2, 1, 4, 4, 5, 5, 1, 8]));</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/2018-11-06-Html相关/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/06/2018-11-06-Html相关/" itemprop="url">知识点积累</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-06T14:48:35+08:00">
+                2018-11-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="html语义化"><a href="#html语义化" class="headerlink" title="html语义化"></a>html语义化</h3><ol>
+<li>减少使用无语义标签div和span。</li>
+<li>不使用纯样式标签，用css设置。</li>
+<li>表格：标题用caption，主体用tbody，尾部用tfooter，表头用th，单元格用td。</li>
+<li>表单域要用fieldset标签包起来，并用legend标签说明表单的用途。</li>
+<li>每个input标签对应的说明文本都需要使用label标签，并且通过为input设置id属性，在lable标签中设置for=someld来让说明文本和相对应的input关联起来。</li>
+</ol>
+<h3 id="js相关"><a href="#js相关" class="headerlink" title="js相关"></a>js相关</h3><ol>
+<li><p>数组去重<br>思路1：定义一个新数组，并存放原数组的第一个元素，然后将元素组一一和新数组的元素对比，若不同则存放在新数组中<br>思路2：先将原数组排序，在与相邻的进行比较，如果不同则存入新数组。<br>思路3：利用对象属性存在的特性，如果没有该属性则存入新数组。<br>思路4（最常用）：使用es6 set</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let arr= [1, 2, 3, 3, 5, 7, 2, 6, 8];</span><br><span class="line">console.log([...new Set(arr)]);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>去除首尾空格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function myTrim(str) &#123;</span><br><span class="line">  let reg = /^\s+|\s+$/g;</span><br><span class="line">  return str.replace(reg, &quot;&quot;);</span><br><span class="line">&#125;</span><br><span class="line">console.log(myTrim(&apos;asdf&apos;));</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/02/2018-11-02-ordinary-string-operate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -302,10 +561,11 @@
           
             <h3 id="js-一键复制"><a href="#js-一键复制" class="headerlink" title="js-一键复制"></a>js-一键复制</h3><ol>
 <li>给input添加id</li>
-<li>代码如下：<br><code>const userkey: any = document.getElementById(&#39;userkey&#39;);
- userkey.select();
- document.execCommand(&#39;Copy&#39;);
- this.$message.success(&#39;Key复制成功！&#39;);</code></li>
+<li>代码如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const userkey: any = document.getElementById(&apos;userkey&apos;);</span><br><span class="line">userkey.select();</span><br><span class="line">document.execCommand(&apos;Copy&apos;);</span><br><span class="line">this.$message.success(&apos;Key复制成功！&apos;);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="清除冒泡"><a href="#清除冒泡" class="headerlink" title="清除冒泡"></a>清除冒泡</h3><ol>
+<li><code>e.stopPropagation();</code></li>
 </ol>
 
           
@@ -772,7 +1032,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -813,7 +1073,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
