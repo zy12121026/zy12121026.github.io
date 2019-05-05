@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/2019-01-05-常用算法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/05/2019-01-05-算法收集/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/05/2019-01-05-常用算法/" itemprop="url">常用算法</a></h1>
+                <a class="post-title-link" href="/2019/05/05/2019-01-05-算法收集/" itemprop="url">算法收集</a></h1>
         
 
         <div class="post-meta">
@@ -260,8 +260,132 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-05T10:53:36+08:00">
-                2019-01-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-05T16:01:56+08:00">
+                2019-05-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="数组相关"><a href="#数组相关" class="headerlink" title="数组相关"></a>数组相关</h3><ol>
+<li>题目：给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。<br>思路：维护一个对象来记录每一个元素出现的次数，使用元素的值作为key,元素出现的次数作为value。之后再遍历这个对象，找到value为1的key。对应的key就是那个元素。obj[key] = value<br>常规算法:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function singleNum(arr) &#123;</span><br><span class="line">  const obj = &#123;&#125;;</span><br><span class="line">  for (let i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    obj[arr[i]] = obj[arr[i]] ? obj[arr[i]] + 1 : 1;</span><br><span class="line">  &#125;</span><br><span class="line">  for (let key in obj) &#123;</span><br><span class="line">    if (obj[key] === 1) &#123;</span><br><span class="line">      return Number(key); // 转换key为数字</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(singleNum([2, 2, 1, 4, 4, 5, 5, 1, 8])); // 8</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>其次，添加限制条件：不使用额外空间来实现<br>思路：采用异或方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function singleNumber(arr) &#123;</span><br><span class="line">  for (let i = 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">    arr[0] ^= arr[i];</span><br><span class="line">  &#125;</span><br><span class="line">  return arr[0];</span><br><span class="line">&#125;;</span><br><span class="line">console.log(singleNumber([2, 2, 1, 4, 4, 5, 5, 1, 8]));</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/05/2019-01-05-常用算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/05/05/2019-01-05-常用算法/" itemprop="url">常用算法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-05T16:01:56+08:00">
+                2019-05-05
               </time>
             
 
@@ -355,7 +479,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/05/2019-01-05-算法收集/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/05/2018-11-06-Html相关/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -374,7 +498,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/01/05/2019-01-05-算法收集/" itemprop="url">算法收集</a></h1>
+                <a class="post-title-link" href="/2019/05/05/2018-11-06-Html相关/" itemprop="url">知识点积累</a></h1>
         
 
         <div class="post-meta">
@@ -386,132 +510,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-05T10:32:01+08:00">
-                2019-01-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="数组相关"><a href="#数组相关" class="headerlink" title="数组相关"></a>数组相关</h3><ol>
-<li>题目：给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。<br>思路：维护一个对象来记录每一个元素出现的次数，使用元素的值作为key,元素出现的次数作为value。之后再遍历这个对象，找到value为1的key。对应的key就是那个元素。obj[key] = value<br>常规算法:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function singleNum(arr) &#123;</span><br><span class="line">  const obj = &#123;&#125;;</span><br><span class="line">  for (let i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    obj[arr[i]] = obj[arr[i]] ? obj[arr[i]] + 1 : 1;</span><br><span class="line">  &#125;</span><br><span class="line">  for (let key in obj) &#123;</span><br><span class="line">    if (obj[key] === 1) &#123;</span><br><span class="line">      return Number(key); // 转换key为数字</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(singleNum([2, 2, 1, 4, 4, 5, 5, 1, 8])); // 8</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>其次，添加限制条件：不使用额外空间来实现<br>思路：采用异或方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function singleNumber(arr) &#123;</span><br><span class="line">  for (let i = 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">    arr[0] ^= arr[i];</span><br><span class="line">  &#125;</span><br><span class="line">  return arr[0];</span><br><span class="line">&#125;;</span><br><span class="line">console.log(singleNumber([2, 2, 1, 4, 4, 5, 5, 1, 8]));</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/2018-11-06-Html相关/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/06/2018-11-06-Html相关/" itemprop="url">知识点积累</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-06T14:48:35+08:00">
-                2018-11-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-05T16:01:56+08:00">
+                2019-05-05
               </time>
             
 
@@ -615,7 +615,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/02/2018-11-02-ordinary-string-operate/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/05/2018-11-02-ordinary-string-operate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -634,7 +634,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/02/2018-11-02-ordinary-string-operate/" itemprop="url">小技巧</a></h1>
+                <a class="post-title-link" href="/2019/05/05/2018-11-02-ordinary-string-operate/" itemprop="url">小技巧</a></h1>
         
 
         <div class="post-meta">
@@ -646,8 +646,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-02T10:27:49+08:00">
-                2018-11-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-05T16:01:56+08:00">
+                2019-05-05
               </time>
             
 
@@ -742,7 +742,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/27/2018-09-27-git-branch-steps/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/05/2018-09-27-git-branch-steps/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -761,7 +761,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/27/2018-09-27-git-branch-steps/" itemprop="url">GIT操作</a></h1>
+                <a class="post-title-link" href="/2019/05/05/2018-09-27-git-branch-steps/" itemprop="url">GIT操作</a></h1>
         
 
         <div class="post-meta">
@@ -773,8 +773,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-27T10:26:11+08:00">
-                2018-09-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-05T16:01:56+08:00">
+                2019-05-05
               </time>
             
 
@@ -869,7 +869,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/19/2018-09-19-hexo-operate-steps/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/05/2018-09-19-hexo-operate-steps/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -888,7 +888,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/19/2018-09-19-hexo-operate-steps/" itemprop="url">Hexo Operate Steps</a></h1>
+                <a class="post-title-link" href="/2019/05/05/2018-09-19-hexo-operate-steps/" itemprop="url">Hexo Operate Steps</a></h1>
         
 
         <div class="post-meta">
@@ -900,8 +900,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-19T16:32:36+08:00">
-                2018-09-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-05T16:01:56+08:00">
+                2019-05-05
               </time>
             
 
@@ -998,7 +998,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/19/2018-09-19-hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/05/2018-09-19-hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -1017,7 +1017,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/19/2018-09-19-hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2019/05/05/2018-09-19-hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
@@ -1029,8 +1029,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-19T10:21:47+08:00">
-                2018-09-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-05T16:01:56+08:00">
+                2019-05-05
               </time>
             
 
